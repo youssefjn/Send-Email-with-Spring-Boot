@@ -47,7 +47,7 @@ public class EmailController {
 	public @ResponseBody
 	ResponseEntity<String> sendEmailAttachment(@PathVariable("user-email") String email) throws FileNotFoundException, MessagingException {
 
-		emailService.sendEmailWithAttachment(email, "Order Confirmation", "Thanks for your recent order", "classpath:purchase_order.pdf");
+		emailService.sendEmailWithAttachment(email, "Order Confirmation", "Thanks for your recent order", "classpath:purchase_order.txt");
 
 		return new ResponseEntity<>("Please check your inbox for order confirmation", HttpStatus.OK);
 	}
